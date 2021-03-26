@@ -196,6 +196,24 @@ class Witch extends Npc
                 return "the powder or the stars";
             case 'TriforcePiece':
                 return "hoarding for ganon";
+            case 'RupeeRing':
+                return 'witch trading for riches';
+            case 'GravityRing':
+                return 'jumping power-up';
+            case 'FireRing':
+            case 'FlameRing':
+            case 'ProgressiveFireRing':
+                return 'ancient fire artifacts';
+            case 'PowerRing':
+            case 'SwordRing':
+            case 'ProgressivePowerRing':
+                return 'witch powering up';
+            case 'GuardRing':
+            case 'DiamondRing':
+            case 'ProgressiveGuardRing':
+                return 'witchy protection charm';
+            case 'LightRing':
+                return 'magic sword for trade';
             case 'Nothing':
             default:
                 return "mushrooms go poof";

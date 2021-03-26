@@ -70,28 +70,28 @@ class East extends Region
         });
 
         $this->locations["Hookshot Cave - Top Right"]->setRequirements(function ($locations, $items) {
-            return $items->has('Hookshot')
+            return ($items->has('Hookshot') || $items->canJump())
                 && (($items->has('MoonPearl') || ($this->world->config('canOWYBA', false) && $items->hasABottle()))
                     && ($items->canLiftRocks() || $this->world->config('canOneFrameClipOW', false)
                         || ($this->world->config('canBootsClip', false) && $items->has('PegasusBoots'))));
         });
 
         $this->locations["Hookshot Cave - Top Left"]->setRequirements(function ($locations, $items) {
-            return $items->has('Hookshot')
+            return ($items->has('Hookshot') || $items->canJump())
                 && (($items->has('MoonPearl') || ($this->world->config('canOWYBA', false) && $items->hasABottle()))
                     && ($items->canLiftRocks() || $this->world->config('canOneFrameClipOW', false)
                         || ($this->world->config('canBootsClip', false) && $items->has('PegasusBoots'))));
         });
 
         $this->locations["Hookshot Cave - Bottom Left"]->setRequirements(function ($locations, $items) {
-            return $items->has('Hookshot')
+            return ($items->has('Hookshot') || $items->canJump())
                 && (($items->has('MoonPearl') || ($this->world->config('canOWYBA', false) && $items->hasABottle()))
                     && ($items->canLiftRocks() || $this->world->config('canOneFrameClipOW', false)
                         || ($this->world->config('canBootsClip', false) && $items->has('PegasusBoots'))));
         });
 
         $this->locations["Hookshot Cave - Bottom Right"]->setRequirements(function ($locations, $items) {
-            return ($items->has('Hookshot') || ($this->world->config('itemPlacement') !== 'basic' && $items->has('PegasusBoots')))
+            return ($items->has('Hookshot') || $items->canJump() || ($this->world->config('itemPlacement') !== 'basic' && $items->has('PegasusBoots')))
                 && (($items->has('MoonPearl') || ($this->world->config('canOWYBA', false) && $items->hasABottle()))
                     && ($items->canLiftRocks() || $this->world->config('canOneFrameClipOW', false)
                         || ($this->world->config('canBootsClip', false) && $items->has('PegasusBoots'))));

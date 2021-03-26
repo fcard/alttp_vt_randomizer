@@ -14,7 +14,7 @@
   "require": {
     "php": ">=7.4",
     "ext-bcmath": "*",
-    "doctrine/dbal": "^2.5",
+    "doctrine/dbal": "^3.0",
     "ezyang/htmlpurifier": "^4.9",
     "graham-campbell/markdown": "^11.0",
     "hashids/hashids": "^4.0",
@@ -40,7 +40,7 @@
     "nunomaduro/collision": "^3.0",
     "nunomaduro/larastan": "^0.5.2",
     "nunomaduro/phpinsights": "^1.3",
-    "phpunit/phpunit": "^8.1"
+    "phpunit/phpunit": "^9.4"
   },
   "repositories": [
     {
@@ -49,9 +49,9 @@
         "name": "z3/randomizer",
         "version": "31.0.7",
         "source": {
-          "url": "https://github.com/KatDevsGames/z3randomizer",
+          "url": "https://github.com/fcard/z3randomizer",
           "type": "git",
-          "reference": "76f35b878696eea8ac869ef7c148a65e4e7825b5"
+          "reference": "master"
         }
       }
     },

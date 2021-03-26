@@ -193,6 +193,24 @@ class HauntedGrove extends Dig
                 return "mario powers up again";
             case 'TriforcePiece':
                 return "wise boy has triangle again";
+            case 'RupeeRing':
+                return "ring boy has money again";
+            case 'GravityRing':
+                return "ring boy jumps again";
+            case 'FireRing':
+            case 'FlameRing':
+            case 'ProgressiveFireRing':
+                return "ring boy is fireproof again";
+            case 'PowerRing':
+            case 'SwordRing':
+            case 'ProgressivePowerRing':
+                return "ring boy is powerful again";
+            case 'GuardRing':
+            case 'DiamondRing':
+            case 'ProgressiveDiamondRing':
+                return "ring boy takes no damage again";
+            case 'LightRing':
+                return "ring boy fires beams again";
             case 'Nothing':
             default:
                 return "empty boy does nothing again";

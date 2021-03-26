@@ -234,6 +234,24 @@ class Uncle extends Location
             case 'PowerStar':
             case 'TriforcePiece':
                 return "your uncle is important";
+            case 'RupeeRing':
+                return 'your uncle is an economist';
+            case 'GravityRing':
+                return 'your uncle can jump';
+            case 'FireRing':
+            case 'FlameRing':
+            case 'ProgressiveFireRing':
+                return 'your uncle is fireproof';
+            case 'PowerRing':
+            case 'SwordRing':
+            case 'ProgressivePowerRing':
+                return 'your uncle is powerful';
+            case 'GuardRing':
+            case 'DiamondRing':
+            case 'ProgressiveGuardRing':
+                return 'your uncle is indestructible';
+            case 'LightRing':
+                return 'your uncle has cool beams';
             case 'Nothing':
             default:
                 return "your uncle does nothing";

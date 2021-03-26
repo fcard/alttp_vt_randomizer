@@ -227,6 +227,8 @@ class Pedestal extends Location
                 return "and the power star";
             case 'TriforcePiece':
                 return "the triforce piece";
+            case 'RupeeRing':
+                return "and the money ring";
             case 'Nothing':
             default:
                 return "and nothing";

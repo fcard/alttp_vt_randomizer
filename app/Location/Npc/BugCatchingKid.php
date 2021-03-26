@@ -185,6 +185,24 @@ class BugCatchingKid extends Npc
                 return "the starry-eyed kid";
             case 'TriforcePiece':
                 return "triforce-holding kid";
+            case 'RupeeRing':
+                return 'the money-making kid';
+            case 'GravityRing':
+                return 'the bunny kid';
+            case 'FireRing':
+            case 'FlameRing':
+            case 'ProgressiveFireRing':
+                return 'the ganon-proof kid';
+            case 'PowerRing':
+            case 'SwordRing':
+            case 'ProgressivePowerRing':
+                return 'the strongest kid';
+            case 'GuardRing':
+            case 'DiamondRing':
+            case 'ProgressiveGuardRing':
+                return 'the blocking kid';
+            case 'LightRing':
+                return 'the sword-beaming kid';
             case 'Nothing':
             default:
                 return "nothing-having kid";

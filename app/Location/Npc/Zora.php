@@ -203,6 +203,24 @@ class Zora extends Npc
                 return "power star for sale";
             case 'TriforcePiece':
                 return "triangle for sale";
+            case 'RupeeRing':
+                return 'investment for sale';
+            case 'GravityRing':
+                return 'acrobatic lessons for sale';
+            case 'FireRing':
+            case 'FlameRing':
+            case 'ProgressiveFireRing':
+                return 'firefighter equipment for sale';
+            case 'PowerRing':
+            case 'SwordRing':
+            case 'ProgressivePowerRing':
+                return 'punch power for sale';
+            case 'GuardRing':
+            case 'DiamondRing':
+            case 'ProgressiveGuardRing':
+                return 'stone skin for sale';
+            case 'LightRing':
+                return 'beam upgrade for sale';
             case 'Nothing':
             default:
                 return "Nothing, so stupid";

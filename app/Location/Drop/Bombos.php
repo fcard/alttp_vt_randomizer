@@ -272,6 +272,30 @@ class Bombos extends Location
                 return "Aim for the\nmoon. You may\nhit a 'star'";
             case 'TriforcePiece':
                 return "a yellow\ntriangle\nyou need this";
+            case 'RupeeRing':
+                return "Ring that gives\nmoney";
+            case 'GravityRing':
+                return "Ring that protects\nfrom falls";
+            case 'FireRing':
+                return "Ring that protects\nfrom moderate heat";
+            case 'FlameRing':
+                return "Ring that protects\nfrom all heat";
+            case 'LightRing':
+                return "Ring that gives\nbeam power";
+            case 'PowerRing':
+                return "Ring that gives\nstrength";
+            case 'SwordRing':
+                return "Ring that gives\na lot of strength";
+            case 'GuardRing':
+                return "Ring that gives\ndefense";
+            case 'DiamondRing':
+                return "Ring that gives\na lot of defense";
+            case 'ProgressiveFireRing':
+                return "Ring that protects\nfrom more heat";
+            case 'ProgressivePowerRing':
+                return "Ring that gives\nmore strength";
+            case 'ProgressiveGuardRing':
+                return "Ring that gives\nmore defense";
             case 'Nothing':
             default:
                 return "Don't waste\nyour time!";

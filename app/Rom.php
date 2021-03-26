@@ -12,8 +12,8 @@ use Log;
  */
 class Rom
 {
-    const BUILD = '2020-09-25';
-    const HASH = '251976ea7cdaadf16742c4f86c571732';
+    const BUILD = '2021-03-04';
+    const HASH = '6897fac3f511c21b13b760d98ae2f99e';
     const SIZE = 2097152;
 
     private $tmp_file;
@@ -103,6 +103,7 @@ class Rom
      */
     public function checkMD5(): bool
     {
+        Log::info(sprintf("MD5: %s\n", $this->getMD5()));
         return $this->getMD5() === static::HASH;
     }
 
@@ -174,6 +175,7 @@ class Rom
     public function setStartingEquipment(ItemCollection $items)
     {
         $equipment = array_fill(0x340, 0x4F, 0);
+        $equipment_extra = array_fill(0, 0x20, 0);
         $starting_rupees = 0;
         $starting_arrow_capacity = 0;
         $starting_bomb_capacity = 0;
@@ -649,6 +651,9 @@ class Rom
                 case 'KeyA2':
                     $equipment[0x389] += 1;
                     break;
+                case 'RupeeRing':
+                    $equipment_extra[0x0] = 1;
+                    break;
                 case 'Crystal1':
                     $equipment[0x37A] |= 0b00000010;
                     break;
@@ -677,6 +682,7 @@ class Rom
         $equipment[0x363] = $equipment[0x361] = $starting_rupees >> 8;
 
         $this->write(0x183000, pack('C*', ...$equipment));
+        $this->write(0x183100, pack('C*', ...$equipment_extra));
         // For file select screen
         $this->write(0x271A6, pack('C*', ...array_slice($equipment, 0, 60)));
         $this->setMaxArrows($starting_arrow_capacity);

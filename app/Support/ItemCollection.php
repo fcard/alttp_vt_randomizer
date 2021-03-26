@@ -369,6 +369,18 @@ class ItemCollection extends Collection
             || $this->has('TitansMitt');
     }
 
+    public function canJump()
+    {
+        return $this->has('GravityRing');
+    }
+
+    public function canDashJump()
+    {
+      return $this->canJump()
+          && $this->has('PegasusBoots');
+    }
+
+    /**
     /**
      * Requirements for lifting dark rocks
      *
